@@ -2,6 +2,11 @@
 set -e
 ZMQ_VERSION=${ZMQ_VERSION:-"4.3.2"}
 
+_TEMP_DIR="${PWD}/prebuilds";
+if [ ! -n "$_TEMP_DIR" ]; then 
+	echo "\033[33m directory not exists:${_TEMP_DIR}\033[0m"
+	exit
+fi
 SRC_URL="http://gitlab.runsasoft.com:8999/cdn/jars/raw/master/zeromq-${ZMQ_VERSION}.tar.gz"
 SRC_DIR="zeromq-${ZMQ_VERSION}"
 TARBALL="zeromq-${ZMQ_VERSION}.tar.gz"
