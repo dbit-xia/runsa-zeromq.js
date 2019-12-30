@@ -3,8 +3,8 @@ set -e
 ZMQ_VERSION=${ZMQ_VERSION:-"4.3.2"}
 
 SRC_URL="http://gitlab.runsasoft.com:8999/cdn/libzmq/-/archive/${ZMQ_VERSION}/libzmq-${ZMQ_VERSION}.tar.gz"
-SRC_DIR="zeromq-${ZMQ_VERSION}"
-TARBALL="zeromq-${ZMQ_VERSION}.tar.gz"
+SRC_DIR="libzmq-${ZMQ_VERSION}"
+TARBALL="libzmq-${ZMQ_VERSION}.tar.gz"
 BUILD_OPTIONS=""
 
 if [ -n "${WINDIR}" ]; then
