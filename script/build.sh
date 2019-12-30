@@ -2,7 +2,7 @@
 set -e
 ZMQ_VERSION=${ZMQ_VERSION:-"4.3.2"}
 
-SRC_URL="https://github.com/zeromq/libzmq/releases/download/v${ZMQ_VERSION}/zeromq-${ZMQ_VERSION}.tar.gz"
+SRC_URL="http://gitlab.runsasoft.com:8999/cdn/libzmq/-/archive/${ZMQ_VERSION}/libzmq-${ZMQ_VERSION}.tar.gz"
 SRC_DIR="zeromq-${ZMQ_VERSION}"
 TARBALL="zeromq-${ZMQ_VERSION}.tar.gz"
 BUILD_OPTIONS=""
@@ -24,10 +24,6 @@ if [ -n "${WINDIR}" ]; then
 else
   PATH_PREFIX="${PWD}/build/libzmq"
   # Working directory is project root.
-  if [ -f "${APP_LIBZMQ_DIR}" ]; then
-    PATH_PREFIX="$APP_LIBZMQ_DIR"
-    echo "use $PATH_PREFIX"
-  fi
   ARTIFACT="${PATH_PREFIX}/lib/libzmq.a"
   CMAKE_GENERATOR="Unix Makefiles"
 
