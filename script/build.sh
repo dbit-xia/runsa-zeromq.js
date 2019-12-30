@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-
+pwd
 ZMQ_VERSION=${ZMQ_VERSION:-"4.3.2"}
 
 SRC_URL="https://github.com/zeromq/libzmq/releases/download/v${ZMQ_VERSION}/zeromq-${ZMQ_VERSION}.tar.gz"
